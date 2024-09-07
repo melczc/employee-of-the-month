@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Employee of the Month</title>
+  </head>
+  <body>
+    <script src="tracker.js" type="module"></script>
+
+    <div class="main-container" id="main-container">
+      <h1 class="title">Employee of the Month</h1>
+      <input
+        class="join"
+        id="join"
+        type="button"
+        value="I want to participate"
+      />
+      <h2>Current Ranking</h2>
+      <div class="ranking-order">
+        <span id="loader"></span>
+        <h4 id="loader-text">Fetching Data...</h4>
+        <ol id="ranking-order"></ol>
+      </div>
+
+      <div class="vote-box" id="vote-box">
+        <h2>Want to be Employee of the Month?</h2>
+
+        <select name="Select your name" id="staff-list"></select>
+
+        <div id="captcha-container" style="display: none">
+          <h5 class="h5-title">
+            To prevent cheating, please verify your existence
+          </h5>
+          <div id="captcha-text-box"></div>
+          <input
+            type="text"
+            id="captcha-input"
+            placeholder="Say something nice about yourself"
+            required
+          />
+        </div>
+        <button class="join" id="vote-me-btn" disabled>
+          Click to be Employee of the Month
+        </button>
+      </div>
+    </div>
+    <div class="end-vote" id="end-vote">
+      <canvas id="end-of-vote"></canvas>
+
+      <h1 class="thank-you-message">Thank You For Your Vote!</h1>
+    </div>
+    <script src="confetti.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
