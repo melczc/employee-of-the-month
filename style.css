@@ -222,10 +222,10 @@ select {
 }
 
 .employee-name {
-  font-family: "Jersey 25", sans-serif;
+  
   font-weight: 400;
   font-style: normal;
-  font-size: 2vh;
+  font-size: 1.5vh;
   margin-bottom: 5px;
     
 }
